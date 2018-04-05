@@ -1,0 +1,66 @@
+*{
+	box-sizing:border-box;
+}
+body{
+	margin:0px;color:#222222;font-size:13px;
+	font-family:"微軟正黑體",Arial,sans-serif;
+}
+img{
+	vertical-align:middle;
+}
+/* nav */
+nav{
+	background-color:#ffffff;color:#888888;
+	position:fixed;top:0px;left:0px;z-index:100;width:100%;
+	display:flex;justify-content:center;align-items:center;
+	height:48px;border-bottom:1px solid #aaaaaa;
+}
+nav>.logo{
+	flex:none;margin-left:24px;
+}
+nav>.logo>img{
+	height:32px;
+}
+nav>.logo-mobile{
+	flex:auto;display:none;margin-right:20px;
+	overflow-x:hidden;white-space:nowrap;text-overflow:ellipsis;
+}
+nav>.logo-mobile>img{
+	height:24px;
+}
+nav>.logo-mobile>.title{
+	font-size:18px;
+	vertical-align:middle;margin-left:10px;
+}
+nav>.menu{
+	flex:auto;color:#999999;overflow-x:hidden;white-space:nowrap;
+	margin-left:48px;margin-right:48px;
+	height:48px;line-height:48px;
+}
+nav>.menu>.item{
+	flex:none;display:inline-block;padding:0px 24px;height:100%;
+	cursor:pointer;transition:color 0.5s;
+}
+nav>.menu>.item:hover{
+	color:#666666;
+}
+nav>.menu>.item-current{
+	border-bottom:2px solid #444444;color:#444444;font-weight:bold;
+}
+nav>.user{
+	flex:none;margin-right:24px;
+}
+nav>.user>img{
+	height:32px;
+}
+@media (max-width:500px){
+	nav>.logo{
+		display:none;
+	}
+	nav>.logo-mobile{
+		display:block;
+	}
+	nav>.menu{
+		display:none;
+	}
+}

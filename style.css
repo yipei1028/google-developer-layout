@@ -1,0 +1,202 @@
+*{
+  box-sizing: border-box;
+  /*寬度和高度會包含border和padding*/
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "微軟正黑體","新細明體",Arial, Helvetica, sans-serif;
+}
+
+/* nav start */
+nav{
+  display: flex;
+  height:48px;
+  align-items: center;
+  background-color: #fff; /*給一個背景色不然會透過去*/
+  border-bottom:0.5px solid #ccc;
+  padding:0px 30px 0px 30px;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: 100;
+  width:100%;
+}
+
+nav > .logo>img{ /*標籤裡面的圖片，讓他隨著外層跑*/
+  height:32px;
+}
+
+nav > .logo{
+  flex:none;
+}
+
+nav > .logo-mobile{
+  display: none;
+}
+
+nav > .menu{
+  flex:auto;
+  height: 48px;
+  line-height:28px;
+  padding-left:40px;
+  margin-right:40px;
+  /*因為空間不夠，掉下來了～(===不要換行)*/
+  white-space: nowrap;
+  /*然後再把他從原本預設值的visible改掉藏起來*/
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+nav > .menu > .menu-item{
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  padding: 10px 20px 10px 20px;
+  color:lightgray;
+  font-weight: 100;
+  font-size: 13px;
+}
+
+nav > .menu >.menu-item-current{
+  border-bottom:2px solid gray;
+  color:gray;
+  font-weight: 900;
+}
+
+nav > .user{
+  flex:none;
+}
+
+nav > .user>img{
+  height: 32px;
+}
+/* nav end */
+
+/*mobile size*/
+@media (max-width:500px){
+
+  nav > .logo{
+    display: none;
+  }
+  
+  nav > .menu{
+    display: none;
+  }
+
+  nav > .logo-mobile{
+  display:block;
+  flex:auto;
+  }
+
+  nav > .logo-mobile > img{
+  vertical-align: middle;
+  }
+
+  nav > .logo-mobile > .title{
+  vertical-align: middle;
+  }
+}
+
+.top-container{
+  margin:0 auto;
+  width:100%;
+  margin-top:50px;
+  padding:40px;
+  box-shadow: 0px 5px 10px #aaaaaa;
+}
+
+
+.top-title{
+  display: block;
+  width:800px;
+  margin:0 auto;
+  font-size: 40px;
+  margin-bottom:35px;
+  text-align: center;
+}
+
+.top-search{
+  display: block;
+  margin:0 auto;
+  width:800px;
+  height:40px;
+  background-color: rgb(237,237,237);
+  border:0px;
+  padding:0px 35px 0px 35px;
+}
+
+.top-container > .top-search > .search-icon{
+  display: inline-block;
+  height: 100%;
+}
+
+.top-container > .top-search > .search-icon > img{
+  height:100%;
+}
+
+.top-container > .top-search > input{
+  width:90%;
+  background-color: rgb(237,237,237);
+  border:0px;
+  padding:10px 25px 10px 25px;
+  font-size:15px; 
+  vertical-align: top;
+}
+
+.bottom-container{
+ display: block;
+ max-width:1100px;
+ width:90%;
+ margin:0 auto;
+}
+
+.bottom-title{
+  display: block;
+  margin:35px 0px 35px 0px;
+  font-size: 30px;
+  font-weight:normal;
+  text-align:left;
+}
+
+.single-event-container{
+ display: inline-block;
+ width:45%;
+ height:auto;
+ box-shadow: 0px 5px 10px #aaaaaa;
+ margin-left:3%;
+ margin-bottom:50px;
+ vertical-align: top;
+ background-color: #fff;
+}
+
+.keyVisual-img{
+  width:100%;
+  height:auto;
+}
+
+.event-content{
+  padding:20px;
+}
+
+.event-title{
+ font-size: 20px;
+ font-weight: bold;
+ color:#039be5;
+ line-height: 1.5em;
+ margin-bottom:10px;
+}
+
+.event-description{
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+.read-more-btn{
+  font-size: 15px;
+  font-weight: bold;
+  color:#039be5;
+  line-height: 1.5em;
+  margin-top:10px;
+}
